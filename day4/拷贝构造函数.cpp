@@ -35,6 +35,14 @@ class Student
         cout << "name:" << name << endl;
         cout << "******************" << endl;
     }
+
+    //赋值操作符函数
+    void operator=(const Student &another)
+    {
+        this->age = another.age;
+        this->name = another.name;
+        cout << "赋值操作" << endl;
+    }
 };
 int main()
 {
