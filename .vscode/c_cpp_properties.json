@@ -10,9 +10,7 @@
                 "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include/c++/backward",
                 "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",
                 "C:\\MinGW\\x86_64-w64-mingw32\\include",
-                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include-fixed",
-                "D:\\Ai\\opencv3.3\\opencv\\build\\include\\opencv",
-                "D:\\Ai\\opencv3.3\\opencv\\build\\include\\opencv2"
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include-fixed"
             ],
             "defines": [
                 "_DEBUG",
