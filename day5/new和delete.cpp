@@ -16,7 +16,7 @@ void test()
     int *p = new int(10);
     *p = 10;
 
-    //开辟?一个存放整形数组(包括10个元素)的空间，返回?首元素的地址 
+    //开辟?一个存放整形数组(包括10个元素)的空间，返回?首元素的地址
     int *array_p = new int[10];
 
     if (p != NULL)
@@ -33,6 +33,13 @@ void test()
     for (size_t i = 0; i < 10; i++)
     {
         cout << array_p[i] << endl;
+    }
+
+    //销毁空间
+    if (array_p != NULL)
+    {
+        //记得加上中括号
+        delete[] array_p;
     }
 }
 
