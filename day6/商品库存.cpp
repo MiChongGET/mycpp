@@ -25,9 +25,15 @@ class Goods
         total_weight += weight;
     }
 
+    static int getTotalWeight()
+    {
+        return total_weight;
+    }
+
     ~Goods()
     {
-        cout << "对象被销毁" << endl;
+        //cout << "对象被销毁" << endl;
+        total_weight -= weight;
     }
 };
 
@@ -47,6 +53,7 @@ void buy(Goods *&head, int weight)
     else
     {
         new_goods->next = head;
+        head = new_goods;
     }
 }
 
@@ -63,9 +70,48 @@ void sell(Goods *&head)
     Goods *temp = head;
     head = head->next;
     delete temp;
+    cout << "sell" << endl;
 }
 int main()
 {
+
+    Goods *head = NULL;
+    while (1)
+    {
+        cout << "***************" << endl;
+        cout << "0-退出" << endl;
+        cout << "1-存货" << endl;
+        cout << "2-取货" << endl;
+        cout << "3-查看库存" << endl;
+        cout << "请输入指令:" << endl;
+        int choice;
+        int w;
+        cin >> choice;
+
+        switch (choice)
+        {
+        case 0:
+            //退出
+            return 0;
+            break;
+        case 1:
+            //进货
+            cout << "输入进货量" << endl;
+            cin >> w;
+            buy(head, w);
+            break;
+        case 2:
+            //取货
+            sell(head);
+            break;
+        case 3:
+            //查看库存
+            cout << "商品库存" << Goods::getTotalWeight() << endl;
+            break;
+        default:
+            break;
+        }
+    }
 
     system("pause");
     return 0;
