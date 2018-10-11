@@ -21,14 +21,11 @@ int main()
         cout << ch;
     }
 
-    
-
     //往文件中写数据
     ofstream ofs("D:\\target.txt", ios::app);
-    // char* hello =  "hello world!";
-    // ofs.put(*hello);
+    char hello[20] = "hello world!";
+    ofs << hello << endl;
 
-    ofs << "hello world!" << endl;
 
     ofs.close();
     ifs.close();
