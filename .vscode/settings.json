@@ -3,7 +3,8 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "typeinfo": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "istream": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled",
     "files.autoGuessEncoding": true,
